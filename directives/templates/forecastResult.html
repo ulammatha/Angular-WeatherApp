@@ -1,0 +1,20 @@
+<table class="table panel-heading">
+	<tr class="success">
+	<td>Date</td>
+	<td>Day</td>
+	<td>Morning</td>
+	<td>Evening</td>
+	<td>Night</td>
+	<td>Minimum</td>
+	<td>Maximum</td>
+	</tr>
+	<tr ng-repeat="forecast in forecastData.list">
+	<td>{{forecast.dt * 1000 | date: dateFormat  }}</td>
+	<td>{{fahrenheit({ kelvinValue: forecast.temp.day })}} ℉</td>
+	<td>{{fahrenheit({ kelvinValue: forecast.temp.morn })}} ℉</td>
+	<td>{{fahrenheit({ kelvinValue: forecast.temp.eve })}} ℉</td>
+	<td>{{fahrenheit({ kelvinValue: forecast.temp.night })}} ℉</td>
+	<td>{{fahrenheit({ kelvinValue: forecast.temp.min })}} ℉</td>
+	<td>{{fahrenheit({ kelvinValue: forecast.temp.max })}} ℉</td>
+	</tr>
+</table>

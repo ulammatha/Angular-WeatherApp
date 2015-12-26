@@ -1,0 +1,9 @@
+<h1>{{city}} Temperature</h1>
+Days <a href="#/forecast/2" ng-class="{'bg-primary': days === '2'}"> 2</a> | 
+<a href="#/forecast/4" ng-class="{'bg-primary': days === '4'}">4 </a> | 
+<a href="#/forecast/7" ng-class="{'bg-primary': days === '7'}">7</a>
+<hr>
+<a href="#/home">Back to search</a>
+<div class="container panel panel-default" ng-show = "forecastData.list">	
+	<forecast-result forecast-data="forecastData" fahrenheit = "fahrenheit(kelvinValue)" date-format= "MMMM, dd, yyyy"></forecast-result>
+</div>
